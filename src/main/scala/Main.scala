@@ -52,7 +52,8 @@ object Main {
   def Equation(N: Double): Double = {
     val c = 1
     if (N == 1) 1
-    else (c * math.log(N)) / math.log(2) + Equation(N / 2)
+//    else (c * math.log(N)) / math.log(2) + Equation(N / 2)
+    else (c * math.log10(N)) + Equation(N / 2)
   }
 
   def main(args: Array[String]): Unit = {
@@ -69,6 +70,7 @@ object Main {
     println(Equation(1))
     println(Equation(2))
     println(Equation(4))
+    println(Equation(8))
   }
 
 }
